@@ -7,7 +7,7 @@ namespace _28_10_2021h
         static void Main(string[] args)
         {
 
-            Console.WriteLine(ReversSentence("SALAM. DUNYA "));
+            Console.WriteLine(ReversSentence("Hello. P202 grup? "));
         }
 
         static string ReversSentence(string Sentence)
@@ -19,8 +19,8 @@ namespace _28_10_2021h
 
                 if (Sentence[i] == '.' || Sentence[i] == ',' || Sentence[i] == ' ' || Sentence[i] == '?' || Sentence[i] == '!' || Sentence[i] == ':')
                 {
-                    ResultSentence += ReverseWord(Sentence, i - 1, Flag);
-                    ResultSentence += Sentence[i];
+                    ResultSentence += ReverseWord(Sentence, i - 1, Flag)+ Sentence[i];
+                    // ResultSentence 
                     Flag = i + 1;
                 }
             }
