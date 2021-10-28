@@ -7,41 +7,34 @@ namespace _28_10_2021h
         static void Main(string[] args)
         {
 
-            Console.WriteLine(ReversSentence("salam dunya."));
+            Console.WriteLine(ReversSentence("SALAM. DUNYA "));
         }
 
-        static string ReversSentence(string s)
+        static string ReversSentence(string Sentence)
         {
             int Flag = 0;
             string ResultSentence = string.Empty;
-            for (int i = 0; i < s.Length; i++)
+            for (int i = 0; i < Sentence.Length; i++)
             {
 
-                if (s[i] == '.' || s[i] == ',' || s[i] == ' ' || s[i] == '?' || s[i] == '!' || s[i] == ':')
+                if (Sentence[i] == '.' || Sentence[i] == ',' || Sentence[i] == ' ' || Sentence[i] == '?' || Sentence[i] == '!' || Sentence[i] == ':')
                 {
-                    ResultSentence += ReverseWord(s, i - 1, Flag);
-                    ResultSentence += s[i];
+                    ResultSentence += ReverseWord(Sentence, i - 1, Flag);
+                    ResultSentence += Sentence[i];
                     Flag = i + 1;
                 }
             }
             return ResultSentence;
         }
-        static string ReverseWord(string s, int i, int Flag)
+        static string ReverseWord(string Word, int i, int Flag)
         {
             string Result = string.Empty;
             while (i >= Flag)
             {
-                Result += s[i];
+                Result += Word[i];
                 i--;
             }
-            /**
-             * 
-            for (; i >= Flag; i--)
-            {
-                Result += s[i];
-            }
-            
-         **/
+             
             return Result;
         }
     }
