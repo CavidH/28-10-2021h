@@ -20,7 +20,7 @@ namespace _28_10_2021h
                 if (Sentence[i] == '.' || Sentence[i] == ',' || Sentence[i] == ' ' || Sentence[i] == '?' || Sentence[i] == '!' || Sentence[i] == ':')
                 {
                     ResultSentence += ReverseWord(Sentence, i - 1, Flag)+ Sentence[i];
-                    // ResultSentence 
+                     // ResultSentence +=Sentence[i];
                     Flag = i + 1;
                 }
             }
